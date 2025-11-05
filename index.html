@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت شخصی [اسم شما]</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (برای آیکون‌ها) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts (برای Vazirmatn) -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS سفارشی بسیار کم برای RTL و فونت -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+            /* تنظیم جهت RTL */
+            text-align: right;
+            /* تراز کردن متن به راست */
+            color: #333;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            /* Bold */
+            color: #333 !important;
+        }
+
+        .nav-link {
+            color: #555 !important;
+            margin-left: 1rem;
+            /* فاصله بین لینک‌ها */
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: #007bff !important;
+            /* رنگ آبی بوت‌استرپ برای فعال/هاور */
+        }
+
+        .social-icons a {
+            color: #555 !important;
+            margin-right: 15px;
+            /* فاصله بین آیکون‌های اجتماعی */
+        }
+
+        .social-icons a:hover {
+            color: #007bff !important;
+        }
+
+        .hero-section {
+            background-color: #f8f9fa;
+            /* پس‌زمینه روشن */
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid #fff;
+            /* حاشیه سفید برای عکس پروفایل */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            /* سایه جذاب */
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 70px;
+            height: 4px;
+            background-color: #007bff;
+            /* رنگ خط زیر عنوان */
+            border-radius: 2px;
+        }
+
+        /* Card styles for portfolio */
+        .portfolio-card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            /* افکت هاور */
+        }
+
+        .portfolio-card img {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Mohammad Erfan Abyari</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">درباره من</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">نمونه کارها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">تماس</a>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/[yourusername]" target="_blank" class="text-dark"><i
+                            class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="https://twitter.com/[yourusername]" target="_blank" class="text-dark"><i
+                            class="fab fa-twitter fa-lg"></i></a>
+                    <a href="https://github.com/[yourusername]" target="_blank" class="text-dark"><i
+                            class="fab fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <img src="your-profile-picture.jpg" class="img-fluid rounded-circle mb-4 profile-img"
+                        alt="عکس پروفایل">
+                    <h1 class="display-4 fw-bold mb-3">سلام، من محمد عرفان آبیاری هستم!</h1>
+                    <p class="lead mb-4">طراح UI/UX و توسعه‌دهنده فرانت‌اند</p>
+                    <a href="#portfolio" class="btn btn-primary btn-lg rounded-pill px-4 py-2">نمونه کارهای من <i
+                            class="fas fa-arrow-left ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">درباره من</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="your-about-picture.jpg" class="img-fluid rounded shadow-sm" alt="درباره من">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">سلام! من [اسم شما] هستم، یک طراح UI/UX خلاق و توسعه‌دهنده فرانت‌اند با [تعداد] سال
+                        تجربه در ساخت وب‌سایت‌ها و اپلیکیشن‌های کاربرپسند و جذاب.</p>
+                    <p>در طول مسیر حرفه‌ای‌ام، به شرکت‌های مختلفی کمک کرده‌ام تا با طراحی‌های بصری زیبا و تجربه‌های
+                        کاربری روان، اهدافشان را محقق کنند. شور و اشتیاق من طراحی راه‌حل‌های نوآورانه و کاربرمحور است.
+                    </p>
+                    <h3 class="mt-4 mb-3">مهارت‌های من</h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> طراحی UI/UX
+                                    (Figma,Sketch,Adobe XD)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> HTML5&CSS3<br>
+                                    (Bootstrap, Tailwind CSS)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> JavaScript
+                                    (React, Vue.js)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> PHP
+                                    (laravel)</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> طراحی ریسپانسیو و
+                                    موبایل‌فرست</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> همچنین طراحی بد
+                                    الکترونیکی و</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> برنامه نویسی
+                                    میکروکنترلر ها و</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>تعمیر انواع برد های الکترونیکی و تعمیر انواع باند ها صوتی</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">نمونه کارها</h2>
+            <!-- Filter buttons (optional) -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary m-2 active">همه</button>
+                <button class="btn btn-outline-primary m-2">طراحی وب</button>
+                <button class="btn btn-outline-primary m-2">گرافیک</button>
+                <button class="btn btn-outline-primary m-2">موبایل</button>
+            </div>
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card h-100">
+                        <img src="portfolio-project-1.jpg" class="card-img-top" alt="پروژه ۱">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">نام پروژه اول</h5>
+                            <p class="card-text text-muted">طراحی UI/UX برای وب‌سایت تجارت الکترونیک</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">مشاهده جزئیات <i
+                                    class="fas fa-arrow-left ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card h-100">
+                        <img src="portfolio-project-2.jpg" class="card-img-top" alt="پروژه ۲">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">نام پروژه دوم</h5>
+                            <p class="card-text text-muted">طراحی لوگو و هویت بصری برای استارتاپ</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">مشاهده جزئیات <i
+                                    class="fas fa-arrow-left ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card h-100">
+                        <img src="portfolio-project-3.jpg" class="card-img-top" alt="پروژه ۳">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">نام پروژه سوم</h5>
+                            <p class="card-text text-muted">اپلیکیشن موبایل برای رزرو آنلاین</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-2">مشاهده جزئیات <i
+                                    class="fas fa-arrow-left ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- می‌توانید پروژه‌های بیشتری اضافه کنید -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">تماس با من</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center lead mb-5">برای همکاری در یک پروژه یا هرگونه سوالی، لطفا از طریق فرم زیر با من
+                        در تماس باشید یا از اطلاعات ارتباطی استفاده کنید.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">نام</label>
+                                <input type="text" class="form-control" id="name" placeholder="نام شما" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">ایمیل</label>
+                                <input type="email" class="form-control" id="email" placeholder="ایمیل شما" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">موضوع</label>
+                                <input type="text" class="form-control" id="subject" placeholder="موضوع پیام" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">پیام</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="پیام شما"
+                                    required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 py-2 mt-3">ارسال
+                                    پیام <i class="fas fa-paper-plane ms-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center mt-5">
+                        <h4 class="mb-3">راه‌های دیگر ارتباط</h4>
+                        <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> <a
+                                href="mailto:your.email@example.com" class="text-dark">your.email@example.com</a></p>
+                        <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i> <a href="tel:+989123456789"
+                                class="text-dark">[شماره تلفن شما - اختیاری]</a></p>
+                        <div class="mt-4">
+                            <a href="https://linkedin.com/in/[yourusername]" target="_blank" class="text-dark me-4"><i
+                                    class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="https://twitter.com/[yourusername]" target="_blank" class="text-dark me-4"><i
+                                    class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://github.com/[yourusername]" target="_blank" class="text-dark"><i
+                                    class="fab fa-github fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 محمد عرفان آبیاری تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (includes Popper for dropdowns etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
